@@ -18,4 +18,5 @@ public:
     bool HasTable() const { return hasTable; };
     void ResetTable(bool v) { hasTable = v; };
 };
+
 #endif

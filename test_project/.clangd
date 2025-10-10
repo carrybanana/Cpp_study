@@ -1,0 +1,16 @@
+# 核心：指定C++26标准，Arch的Clang默认用libc++，无需额外指定
+CompileFlags:
+  Add:
+    - -std=c++26        # 启用C++26标准
+# 可选：添加Arch下常用的编译选项（如支持C++26扩展）
+#    - -Wall             # 开启基础警告（可删）
+#    - -Wextra           # 开启基础警告（可删）
+#    - -stdlib=libstdc++                 # 适配GCC 15的libstdc++
+#    - -isystem/usr/include/c++/15       # 适配GCC 15的libstdc++
+#  Remove:
+#    - -std=c++*         # 清除旧标准，防止冲突
+#    - -stdlib=*         # 清除旧标准，防止冲突
+
+# 优化体验：减少无用诊断，加速索引
+# Diagnostics:
+#   UnusedIncludes: Strict     # 隐藏未使用头文件警告（可选）

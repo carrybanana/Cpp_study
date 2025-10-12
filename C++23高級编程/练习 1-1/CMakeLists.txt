@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 4.0.2)
 set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "d0edc3af-4c50-42ea-a356-e2862fe7a444")
 
 # 2. 项目名称和语言
-project(test_project LANGUAGES CXX)
+project(Employee_struct_project LANGUAGES CXX)
 
 # 3. 基础配置：C++26 标准 + 导出 compile_commands.json
 set(CMAKE_CXX_MODULE_STD on)

@@ -2,7 +2,9 @@
 cmake_minimum_required(VERSION 4.0.2)
 
 # 1. 设置 STD Module 的实验性 UUID
-set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "d0edc3af-4c50-42ea-a356-e2862fe7a444")
+# 查询实验性 UUID 需前往 CMake 的 Github仓库 或 Gitlab仓库 ，在项目的 Help/dev/experimental.rst 文件中，可以找到 C++ import std support 栏目，提供了相关内容。
+# 需要注意的是，此 UUID 与 CMake 版本挂钩，你不能直接复制 master/main 分支下的 UUID，而应该使用和你版本匹配的 Tag 下的 UUID 。你可以在本地通过 cmake --version 命令查看本地CMake版本。
+set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "d0edc3af-4c50-42ea-a356-e2862fe7a444")   # cmake version 4.1.2
 
 # 2. 项目名称和语言
 project(Employee_struct_project LANGUAGES CXX)

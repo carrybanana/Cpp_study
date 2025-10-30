@@ -1,16 +1,21 @@
-# 核心：指定C++26标准，Arch的Clang默认用libc++，无需额外指定
+# .clangd 配置文件
 CompileFlags:
   Add:
-    - -std=c++26        # 启用C++26标准
-# 可选：添加Arch下常用的编译选项（如支持C++26扩展）
-#    - -Wall             # 开启基础警告（可删）
-#    - -Wextra           # 开启基础警告（可删）
-#    - -stdlib=libstdc++                 # 适配GCC 15的libstdc++
-#    - -isystem/usr/include/c++/15       # 适配GCC 15的libstdc++
-#  Remove:
-#    - -std=c++*         # 清除旧标准，防止冲突
-#    - -stdlib=*         # 清除旧标准，防止冲突
+    - -std=c++26            # 启用C++26标准
+    #- -fmodules            # 启用Clang模块支持
+
+    # 可选：添加Arch下常用的编译选项（如支持C++26扩展）
+    #- -Wall             # 开启基础警告（可删）
+    #- -Wextra           # 开启基础警告（可删）
+    # 指定模块文件路径（替代ModuleFiles）
+    #- -fmodule-file=./build/employee.pcm
+    # 若有多个模块，可添加多个-fmodule-file，或用-I指定模块搜索目录
+    #- -I./build            # 指定模块文件的搜索目录（等价于ModuleFiles的作用）
+
+  #Remove:
+    #- -std=c++*         # 清除旧标准，防止冲突
+    #- -stdlib=*         # 清除旧标准，防止冲突
 
 # 优化体验：减少无用诊断，加速索引
-# Diagnostics:
-#   UnusedIncludes: Strict     # 隐藏未使用头文件警告（可选）
+#Diagnostics:
+  #UnusedIncludes: Strict     # 隐藏未使用头文件警告（可选）

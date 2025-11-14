@@ -4,7 +4,7 @@ import std;
 int main()
 {
     // Create and populate an employee.
-    Employee anEmployee{};
+    HR::Employee anEmployee{};
     anEmployee.firstInitial = 'J';
     anEmployee.lastInitial = 'D';
     anEmployee.employeeNumber = 42;
@@ -14,4 +14,5 @@ int main()
     std::println("Employee: {}{}", anEmployee.firstInitial, anEmployee.lastInitial);
     std::println("Number: {}", anEmployee.employeeNumber);
     std::println("Salary: ${}", anEmployee.salary);
+    HR::Employee::say();
 }

@@ -1,5 +1,5 @@
 module employee;
 import std;
-void Employee::say() {
+void HR::Employee::say() {
     std::println("Hello, Linux.");
 }
